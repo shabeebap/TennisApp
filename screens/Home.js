@@ -11,10 +11,12 @@ import {
 import {Button, Header} from '@rneui/base';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import {useNavigation} from '@react-navigation/native';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
 export default function Home() {
+  const navigation = useNavigation();
   return (
     <View style={styles.root}>
       <Header
@@ -34,10 +36,14 @@ export default function Home() {
             // snapToInterval={SCREEN_WIDTH / 1.4}
             horizontal={true}
             style={styles.scrollView}>
-            <Pressable style={[styles.card, styles.ml10]}>
+            <Pressable
+              onPress={() => {
+                navigation.navigate('Club');
+              }}
+              style={[styles.card, styles.ml10]}>
               <View style={styles.textContainer}>
                 <View>
-                  <Text style={styles.cardText}>Women's Club</Text>
+                  <Text style={styles.cardText}>Tennis Club</Text>
                   <Button
                     title="All levels"
                     buttonStyle={styles.buttonStyle}
@@ -57,7 +63,7 @@ export default function Home() {
             <Pressable style={[styles.card]}>
               <View style={styles.textContainer}>
                 <View>
-                  <Text style={styles.cardText}>Men's Club</Text>
+                  <Text style={styles.cardText}>Football Club</Text>
                   <Button
                     title="All levels"
                     buttonStyle={styles.buttonStyle}
@@ -76,7 +82,7 @@ export default function Home() {
             <Pressable style={[styles.card, styles.marginRight30]}>
               <View style={styles.textContainer}>
                 <View>
-                  <Text style={styles.cardText}>Men's Club</Text>
+                  <Text style={styles.cardText}>Football Club</Text>
                   <Button
                     title="All levels"
                     buttonStyle={styles.buttonStyle}
@@ -112,7 +118,7 @@ export default function Home() {
                 </View>
 
                 <View style={styles.contentView}>
-                  <Text style={styles.yogaText}>Yoga & Tennis</Text>
+                  <Text style={styles.yogaText}>UCL & UEL</Text>
                   <Text style={styles.yogaTime}>Feb 27 | 10:00am-11:00am</Text>
                 </View>
               </View>
