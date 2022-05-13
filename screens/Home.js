@@ -60,7 +60,11 @@ export default function Home() {
               />
             </Pressable>
 
-            <Pressable style={[styles.card]}>
+            <Pressable
+              onPress={() => {
+                navigation.navigate('Club');
+              }}
+              style={[styles.card]}>
               <View style={styles.textContainer}>
                 <View>
                   <Text style={styles.cardText}>Football Club</Text>
@@ -79,7 +83,11 @@ export default function Home() {
                 style={styles.cardImage}
               />
             </Pressable>
-            <Pressable style={[styles.card, styles.marginRight30]}>
+            <Pressable
+              onPress={() => {
+                navigation.navigate('Club');
+              }}
+              style={[styles.card, styles.marginRight30]}>
               <View style={styles.textContainer}>
                 <View>
                   <Text style={styles.cardText}>Football Club</Text>
