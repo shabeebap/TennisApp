@@ -67,7 +67,7 @@ export default function Home() {
               style={[styles.card]}>
               <View style={styles.textContainer}>
                 <View>
-                  <Text style={styles.cardText}>Football Club</Text>
+                  <Text style={styles.cardText}>Football Clubs</Text>
                   <Button
                     title="All levels"
                     buttonStyle={styles.buttonStyle}
