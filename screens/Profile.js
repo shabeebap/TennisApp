@@ -2,6 +2,7 @@ import {View, Dimensions, StyleSheet, Pressable} from 'react-native';
 import React from 'react';
 import {Image, Text} from '@rneui/base';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Entypo from 'react-native-vector-icons/Entypo';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
@@ -32,6 +33,18 @@ export default function Profile() {
         </View>
         <View style={styles.lTextDiv}>
           <Text style={styles.logoText}>The Punisher</Text>
+          <Text style={styles.logoSubText}>UI/UX Designer</Text>
+        </View>
+      </View>
+      <View style={styles.overview}>
+        <View style={styles.overviewHead}>
+          <View style={styles.bellIcon}>
+            <Text style={styles.overviewText}>Overview</Text>
+            <FontAwesome name="bell-o" size={24} color="#3D4785" />
+          </View>
+          <View>
+            <Text>Sep 13,2022</Text>
+          </View>
         </View>
       </View>
     </View>
@@ -51,6 +64,8 @@ const styles = StyleSheet.create({
     marginTop: 30,
     borderRadius: 30,
     paddingHorizontal: 20,
+    elevation: 18,
+    shadowColor: 'gray',
   },
   logoDiv: {
     backgroundColor: '#3D4785',
@@ -73,10 +88,34 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   lTextDiv: {
-    flexDirection: 'row',
     justifyContent: 'center',
+    alignItems: 'center',
   },
   logoText: {
+    fontSize: 30,
+    color: '#3D4785',
+    fontWeight: '900',
+  },
+  logoSubText: {
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  overview: {
+    margin: 14,
+    width: '90%',
+    height: '50%',
+  },
+  overviewHead: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingTop: 12,
+    paddingHorizontal: 4,
+  },
+  bellIcon: {
+    flexDirection: 'row',
+    marginLeft: 6,
+  },
+  overviewText: {
     fontSize: 30,
     color: '#3D4785',
     fontWeight: '900',
