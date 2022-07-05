@@ -40,10 +40,15 @@ export default function Profile() {
         <View style={styles.overviewHead}>
           <View style={styles.bellIcon}>
             <Text style={styles.overviewText}>Overview</Text>
-            <FontAwesome name="bell-o" size={24} color="#3D4785" />
+            <FontAwesome
+              name="bell-o"
+              size={20}
+              color="#3D4785"
+              style={{paddingTop: 12, paddingLeft: 6}}
+            />
           </View>
-          <View>
-            <Text>Sep 13,2022</Text>
+          <View style={styles.dateDiv}>
+            <Text style={styles.dateTxt}>Sep 13,2022</Text>
           </View>
         </View>
       </View>
@@ -119,5 +124,13 @@ const styles = StyleSheet.create({
     fontSize: 30,
     color: '#3D4785',
     fontWeight: '900',
+  },
+  dateDiv: {
+    paddingTop: 12,
+  },
+  dateTxt: {
+    fontSize: 17,
+    fontWeight: '700',
+    color: '#3D4785',
   },
 });
