@@ -35,6 +35,20 @@ export default function Profile() {
           <Text style={styles.logoText}>The Punisher</Text>
           <Text style={styles.logoSubText}>UI/UX Designer</Text>
         </View>
+        <View style={styles.income}>
+          <View style={styles.priceDiv}>
+            <Text style={styles.price}>$8900</Text>
+            <Text style={styles.priceTitle}>Income</Text>
+          </View>
+          <View style={styles.priceDiv2}>
+            <Text style={styles.price}>$5500</Text>
+            <Text style={styles.priceTitle}>Expenses</Text>
+          </View>
+          <View style={styles.priceDiv3}>
+            <Text style={styles.price}>$890</Text>
+            <Text style={styles.priceTitle}>Loan</Text>
+          </View>
+        </View>
       </View>
       <View style={styles.overview}>
         <View style={styles.overviewHead}>
@@ -65,7 +79,7 @@ const styles = StyleSheet.create({
   profileDiv: {
     backgroundColor: '#FFFFFF',
     width: '90%',
-    height: '50%',
+    height: '48%',
     marginTop: 30,
     borderRadius: 30,
     paddingHorizontal: 20,
@@ -81,7 +95,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     alignItems: 'center',
     marginHorizontal: 90,
-    marginVertical: 10,
+    marginVertical: 3,
   },
   logoImage: {
     width: 100,
@@ -97,12 +111,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   logoText: {
-    fontSize: 30,
+    fontSize: 28,
     color: '#3D4785',
     fontWeight: '900',
   },
   logoSubText: {
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: '600',
   },
   overview: {
@@ -121,7 +135,7 @@ const styles = StyleSheet.create({
     marginLeft: 6,
   },
   overviewText: {
-    fontSize: 30,
+    fontSize: 26,
     color: '#3D4785',
     fontWeight: '900',
   },
@@ -129,8 +143,48 @@ const styles = StyleSheet.create({
     paddingTop: 12,
   },
   dateTxt: {
-    fontSize: 17,
+    fontSize: 15,
     fontWeight: '700',
     color: '#3D4785',
+  },
+  income: {
+    flexDirection: 'row',
+    height: '25%',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  price: {
+    fontSize: 18,
+    fontWeight: '500',
+    color: '#3D4785',
+    textAlign: 'center',
+  },
+  priceTitle: {
+    color: 'gray',
+    textAlign: 'center',
+    fontSize: 12,
+  },
+  priceDiv: {
+    borderRightWidth: 1,
+    borderColor: 'lightgray',
+    width: '30%',
+  },
+  priceDiv2: {
+    borderRightWidth: 1,
+    borderColor: 'lightgray',
+    width: '30%',
+  },
+  priceDiv3: {
+    width: '30%',
+  },
+  Div: {
+    backgroundColor: '#FFFFFF',
+    width: '90%',
+    height: '48%',
+    marginTop: 30,
+    borderRadius: 30,
+    paddingHorizontal: 20,
+    elevation: 18,
+    shadowColor: 'gray',
   },
 });
